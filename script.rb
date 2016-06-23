@@ -3,12 +3,13 @@
 # ## create .ruby-version file and add the ruby version, for example ruby-2.3.0
 # ## create .ruby-gemset file and add a gemset, for example packt-script
 # ## run `bundle install`
-# run the script with: "ruby script.rb"
+# run the script with: "ruby script.rb". i recommend to setup a cron to run it daily
 
 ## change these to fit your packtpub account
 #== config ==#
-your_email = "CHANGEME"
-your_password = "CHANGEME"
+your_email = "CHANGEME"           # email of your packtpub account. will also be used to send an email to
+your_password = "CHANGEME"        # password of your packtpub account
+sender_email = "root@cars10k.de"  # sender email used for email
 
 
 #== require gems ==#
@@ -47,6 +48,5 @@ browser.close
 message = "Added new book: #{book_title}"
 
 Net::SMTP.start('localhost') do |smtp|
-  smtp.send_message message, 'root@cars10k.de',
-                             'carstenkoenig92@gmail.com'
+  smtp.send_message message, sender_email, your_email
 end
