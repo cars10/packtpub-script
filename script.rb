@@ -1,5 +1,6 @@
 #== Script to automatically add free packtpublishing book to your library ==#
 # Setup
+# install `phantomjs`
 # ## create .ruby-version file and add the ruby version, for example ruby-2.3.0
 # ## create .ruby-gemset file and add a gemset, for example packt-script
 # ## run `bundle install`
@@ -18,7 +19,7 @@ require 'open-uri' # uri tools
 require 'watir-webdriver' # open & interact with browser
 require 'webdriver-user-agent'
 require 'phantomjs' # headless browser
-require 'net/smtp' # email
+require 'mail' # email
 
 #== variables ==#
 button_class = "twelve-days-claim"
@@ -47,6 +48,9 @@ browser.close
 #== email ==#
 message = "Added new book: #{book_title}"
 
-Net::SMTP.start('localhost') do |smtp|
-  smtp.send_message message, sender_email, your_email
+Mail.deliver do
+  from     'root@cars10k.de'
+  to       your_email
+  subject  'New packtpub book!'
+  body     message
 end

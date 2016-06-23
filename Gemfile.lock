@@ -6,6 +6,11 @@ GEM
     facets (3.1.0)
     ffi (1.9.10)
     json (1.8.3)
+    mail (2.6.4)
+      mime-types (>= 1.16, < 4)
+    mime-types (3.0)
+      mime-types-data (~> 3.2015)
+    mime-types-data (3.2016.0221)
     phantomjs (2.1.1.0)
     psych (2.0.17)
     rubyzip (1.2.0)
@@ -26,6 +31,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  mail
   phantomjs (~> 2.1.1.0)
   watir-webdriver (~> 0.9.1)
   webdriver-user-agent
