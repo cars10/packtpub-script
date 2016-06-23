@@ -43,4 +43,4 @@ browser.close
 #== email ==#
 message = "Added new book: #{book_title}"
 
-#Pony.mail(to: ENV['PACKTPUB_EMAIL'], from: ENV['MAIL_SENDER'], subject: 'New packtpub book', body: message)
+Pony.mail(to: ENV['PACKTPUB_EMAIL'], from: ENV['MAIL_SENDER'], subject: 'New packtpub book', body: message)
