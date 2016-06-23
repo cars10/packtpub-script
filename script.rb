@@ -48,9 +48,11 @@ browser.close
 #== email ==#
 message = "Added new book: #{book_title}"
 
-Mail.deliver do
+mail = Mail.deliver do
   from     'root@cars10k.de'
   to       your_email
   subject  'New packtpub book!'
   body     message
 end
+mail.delivery_method :sendmail
+mail.deliver
