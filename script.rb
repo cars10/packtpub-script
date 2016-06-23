@@ -6,20 +6,15 @@
 # ## run `bundle install`
 # run the script with: "ruby script.rb". i recommend to setup a cron to run it daily
 
-## change these to fit your packtpub account
-#== config ==#
-your_email = "CHANGEME"           # email of your packtpub account. will also be used to send an email to
-your_password = "CHANGEME"        # password of your packtpub account
-sender_email = "root@cars10k.de"  # sender email used for email
-
-
 #== require gems ==#
 require 'rubygems' # gems
 require 'open-uri' # uri tools
 require 'watir-webdriver' # open & interact with browser
 require 'webdriver-user-agent'
 require 'phantomjs' # headless browser
-require 'mail' # email
+require 'pony' # email
+require 'dotenv'
+Dotenv.load
 
 #== variables ==#
 button_class = "twelve-days-claim"
@@ -33,8 +28,8 @@ browser.window.resize_to(1920, 1080) # go full width because we are mobile other
 # login
 browser.goto base_url # go to url
 browser.a(class: 'login-popup').when_present(5).click # wait till page is loaded
-browser.form(id: 'packt-user-login-form').text_field(name: 'email').set(your_email)
-browser.form(id: 'packt-user-login-form').text_field(name: 'password').set(your_password)
+browser.form(id: 'packt-user-login-form').text_field(name: 'email').set(ENV['PACKTPUB_EMAIL'])
+browser.form(id: 'packt-user-login-form').text_field(name: 'password').set(ENV['PACKTPUB_PASSWORD'])
 browser.form(id: 'packt-user-login-form').button(type: 'submit').click
 browser.div(id: 'account-bar-logged-in').wait_until_present(5) # user is logged in
 
@@ -48,11 +43,4 @@ browser.close
 #== email ==#
 message = "Added new book: #{book_title}"
 
-mail = Mail.deliver do
-  from     'root@cars10k.de'
-  to       your_email
-  subject  'New packtpub book!'
-  body     message
-end
-mail.delivery_method :sendmail
-mail.deliver
+#Pony.mail(to: ENV['PACKTPUB_EMAIL'], from: ENV['MAIL_SENDER'], subject: 'New packtpub book', body: message)
