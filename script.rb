@@ -15,6 +15,7 @@ require 'phantomjs' # headless browser
 require 'pony' # email
 require 'dotenv'
 Dotenv.load
+Selenium::WebDriver::PhantomJS.path = ENV['PHANTOMJS']
 
 #== variables ==#
 button_class = "twelve-days-claim"
