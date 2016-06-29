@@ -62,7 +62,8 @@ Probably you want to run the script daily, so just setup a cron for that. Becaus
 export PATH="$PATH:$HOME/.rvm/bin"   
 
 ## source rvm so the gemset (and therefore ruby) is available.
-# Make sure to adjust the path to the rvm binary: if you installed it as a user its in /home/<your_user>/.rvm/scripts/rvm . It will be different if you installed rvm with sudo rights
+# Make sure to adjust the path to the rvm binary: if you installed it as a user its in /home/<your_user>/.rvm/scripts/rvm .
+# It will be different if you installed rvm with sudo rights
 source /home/<your_user>/.rvm/scripts/rvm
 
 ## cd into the folder (to set the gemset) and run the script.
@@ -70,7 +71,7 @@ source /home/<your_user>/.rvm/scripts/rvm
 # rvm gemset use <name_of_gemset> && ruby /path/to/folder/packtpub-script/script.rb
 cd /path/to/folder/packtpub-script/ && ruby script.rb
 ```
-Save the script, set permissions to allow execution, `sudo chmod +x script.sh` and setup a cronjob:
+Save the script, set permissions to allow execution with `sudo chmod +x script.sh` and setup a cronjob:
 ```bash
 crontab -e
 ```
@@ -90,7 +91,7 @@ If the script/your cron does not work, first of all try to run the script manual
     * If there are no error messages, try to insert `browser.screenshot.save 'screenshot.png'` anywhere in the script and check what wents wrong.
 * I receive the book but no notification
     * Check if you have setup the `.env` file correctly
-    * Check if postfix is running and working 
+    * Check if postfix is running and working
 
 ### Manual execution works, cron does not
 Did you receive an error report from cron? Postfix should send you any errors via email automatically. If you did not receive an email, check your systems inbox, usally in `/var/mail/<user>` (or run the `mail` command). If you cannot find anything there either, check the system logs in `/var/log/syslog`, this is where cron logs anything (at least in a standard ubuntu system).
