@@ -3,6 +3,9 @@ This script runs a headless browser, goes to `https://www.packtpub.com/`, logs i
 
 It's written in ruby and uses phantomjs to run a headless browser and do what was explained above.
 
+`Why did you write another one? There are already plenty of scripts for that!`
+I wanted to receive an email notification with the new books title and could not find a script with that functionality.
+
 ## Setup
 ### What you need
 * `ruby`. I recommend setting it up with [rvm](http://rvm.io/)
