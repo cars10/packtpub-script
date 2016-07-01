@@ -102,6 +102,9 @@ Did you receive an error report from cron? Postfix should send you any errors vi
 ### Neither manual execution nor cron work
 You either failed to setup `rvm`, the dependencies or `phantomjs`. Try to redo the steps in the setup or open an issue in this repo if you cannot get it working.
 
+# TODO
+* Send the actual book as an attachment in the mail
+
 # License
 MIT
 
