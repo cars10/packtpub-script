@@ -37,7 +37,7 @@ bundle install
 ```
 
 ### Configuration
-You need to setup your credentials and the emails to send/receive the notifiaction. To do so you have to create a file named `.env` inside the `packtpub-script` folder with the following contents:
+You need to setup your packtpub credentials and the email adresses to send/receive the notification. To do so you have to create a file named `.env` inside the `packtpub-script` folder with the following contents:
 ```bash
 PACKTPUB_EMAIL=your@mail.com
 PACKTPUB_PASSWORD=yourPassword
@@ -46,7 +46,7 @@ MAIL_RECEIVER=your@mail.com
 MAIL_SENDER=smtp_sender@email.com
 PHANTOMJS=/path/to/phantomjsBinary
 ```
-To find out the path to the `phantomjs` binary, simply run `whereis phantomjs` if you installed it.
+To find out the path to the `phantomjs` binary, simply run `whereis phantomjs`.
 
 ## How to run the script
 Run the script manually with
@@ -84,20 +84,20 @@ To run daily at 04:00 am:
 If the script/your cron does not work, first of all try to run the script manually with `ruby script.rb`.
 
 ### Cron / manual execution basically works, but...
-* Script times our before finding the necessary content/classes
+* Script times out before finding the necessary content/classes
     * Try to increase the timeout variable
     * Check their website manually to see if they changed any classnames
 * Script runs throught, but i do not get the new book:
-    * If there are no error messages, try to insert `browser.screenshot.save 'screenshot.png'` anywhere in the script and check what wents wrong.
+    * If there are no error messages, try to insert `browser.screenshot.save 'screenshot.png'` anywhere in the script and check what went wrong.
 * I receive the book but no notification
     * Check if you have setup the `.env` file correctly
-    * Check if postfix is running and working
+    * Check if your smpt server is running and working
 
 ### Manual execution works, cron does not
 Did you receive an error report from cron? Postfix should send you any errors via email automatically. If you did not receive an email, check your systems inbox, usally in `/var/mail/<user>` (or run the `mail` command). If you cannot find anything there either, check the system logs in `/var/log/syslog`, this is where cron logs anything (at least in a standard ubuntu system).
 
 ### Neither manual execution nor cron work
-You either failed to setup `rvm` or `phantomjs`. Try to redo the steps in the setup or open an issue in this repo if you cannot get it working.
+You either failed to setup `rvm`, the dependencies or `phantomjs`. Try to redo the steps in the setup or open an issue in this repo if you cannot get it working.
 
 # License
 MIT
