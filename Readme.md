@@ -9,7 +9,7 @@ It's written in ruby and uses phantomjs to run a headless browser and do what wa
 ## Setup
 ### What you need
 * `ruby`. I recommend setting it up with [rvm](http://rvm.io/)
-* `phantomjs`. Install via your systems packagemanager or download manually from their [website](http://phantomjs.org/)
+* `phantomjs` >= `2.0`. Install via your systems packagemanager or download manually from their [website](http://phantomjs.org/). If you are using ubuntu you need to download it manually because the version in the ubuntu repos is a few years old.
 * If you want to receive an email notification: a running `smtp server`, for example [postfix](https://wiki.ubuntuusers.de/Postfix/)
 
 ### Installation
