@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="RUBY_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$" />
+    <orderEntry type="jdk" jdkName="RVM: ruby-2.3.0 [packtpub-script]" jdkType="RUBY_SDK" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" scope="PROVIDED" name="bundler (v1.12.5, RVM: ruby-2.3.0 [packtpub-script]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="childprocess (v0.5.9, RVM: ruby-2.3.0 [packtpub-script]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="dotenv (v2.1.1, RVM: ruby-2.3.0 [packtpub-script]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="facets (v3.1.0, RVM: ruby-2.3.0 [packtpub-script]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="ffi (v1.9.10, RVM: ruby-2.3.0 [packtpub-script]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="mail (v2.6.4, RVM: ruby-2.3.0 [packtpub-script]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="mime-types (v3.1, RVM: ruby-2.3.0 [packtpub-script]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="mime-types-data (v3.2016.0521, RVM: ruby-2.3.0 [packtpub-script]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="phantomjs (v2.1.1.0, RVM: ruby-2.3.0 [packtpub-script]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="pony (v1.11, RVM: ruby-2.3.0 [packtpub-script]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rubyzip (v1.2.0, RVM: ruby-2.3.0 [packtpub-script]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="selenium-webdriver (v2.53.3, RVM: ruby-2.3.0 [packtpub-script]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="watir-webdriver (v0.9.1, RVM: ruby-2.3.0 [packtpub-script]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="webdriver-user-agent (v7.4, RVM: ruby-2.3.0 [packtpub-script]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="websocket (v1.2.3, RVM: ruby-2.3.0 [packtpub-script]) [gem]" level="application" />
+  </component>
+</module>
