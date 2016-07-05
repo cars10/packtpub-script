@@ -2,4 +2,4 @@
 .ruby-gemset
 screenshot.png
 .env
-.idea/
+/.idea
