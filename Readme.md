@@ -89,6 +89,7 @@ If the script/your cron does not work, first of all try to run the script manual
 ### Cron / manual execution basically works, but...
 * Script times out before finding the necessary content/classes
     * Try to increase the timeout variable
+    * Check you version of phantomjs, `phantomjs --version`. If it is lower then 2, update!
     * Check their website manually to see if they changed any classnames
 * Script runs throught, but i do not get the new book:
     * If there are no error messages, try to insert `browser.screenshot.save 'screenshot.png'` anywhere in the script and check what went wrong.
