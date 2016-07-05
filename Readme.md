@@ -105,6 +105,7 @@ You either failed to setup `rvm`, the dependencies or `phantomjs`. Try to redo t
 # TODO
 * Send the actual book as an attachment in the mail
 * Reduce dependencies, mabye switch from ruby to plain bash +js
+* Add more downloadlinks (mobi, epub)
 
 # License
 MIT
