@@ -36,13 +36,14 @@ browser.div(id: 'account-bar-logged-in').wait_until_present(timeout) # user is l
 # get free book
 browser.goto free_learning_url # go to free book url
 book_title = browser.div(class: 'dotd-title').when_present(timeout).h2.text # get book title
+ebook_id = browser.div(class: 'free-ebook').when_present(timeout).a.href.match(/\/freelearning-claim\/([^\/]*)/)[1]
 browser.a(class: 'twelve-days-claim').when_present(timeout).click # click the button to receive the free book
 #browser.screenshot.save 'screenshot.png' # comment in for debugging
 browser.close # close phantomjs
 
 #== send email ==#
 if ENV['SEND_NOTIFICATION'] == 'true'
-  message = "Added new free book to your library: #{book_title}"
+  message = "Added new free book to your library: #{book_title}\nDownload: https://www.packtpub.com/ebook_download/#{ebook_id}/pdf"
   Pony.mail(
     to: ENV['PACKTPUB_EMAIL'],
     from: ENV['MAIL_SENDER'],
