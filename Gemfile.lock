@@ -34,9 +34,9 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  dotenv
+  dotenv (~> 2.1.1)
   phantomjs (~> 2.1.1.0)
-  pony
+  pony (~> 1.11)
   watir-webdriver (~> 0.9.1)
   webdriver-user-agent
 
