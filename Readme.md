@@ -1,3 +1,5 @@
+As of today, `16. Dec. 2016`, it seems that packtpub has removed the free daily ebook.
+
 # Automatically receive packtpub's free daily book
 This script runs a headless browser, goes to `https://www.packtpub.com/`, logs into your account and "orders" the daily free book. After that it will send you an email with the title of the new book.
 
