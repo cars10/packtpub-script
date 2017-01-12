@@ -8,7 +8,7 @@ It's written in ruby and uses phantomjs to run a headless browser and do what wa
 ## Setup
 ### What you need
 * `ruby`. I recommend setting it up with [rvm](http://rvm.io/), but you can use your systems default ruby if you like.
-* `phantomjs` >= `2.0`. Install via your systems packagemanager or download manually from their [website](http://phantomjs.org/). If you are using ubuntu you need to download it manually because the version in the ubuntu repos is a few years old.
+* `phantomjs` >= `2.0`. Install via your systems packagemanager or download manually from their [website](http://phantomjs.org/). If you are using ubuntu you need to download it manually because the version in the ubuntu repos is a few years old. Try `phantomjs --version` to make sure that it's installed correctly.
 * If you want to receive an email notification: a running `smtp server`, for example [postfix](https://wiki.ubuntuusers.de/Postfix/)
 
 ### Installation
@@ -17,9 +17,9 @@ Checkout the project
 git clone https://github.com/cars10/packtpub-script
 ```
 
-If you use rvm / rbenv: create your gemset. Otherwise with a global ruby installation:
+If you use rvm / rbenv: create your gemset. Skip if you use global ruby installation.
 
-Install the dependencies
+Install the dependencies 
 ```bash
 # run inside the packtpub-script folder
 gem install bundle
