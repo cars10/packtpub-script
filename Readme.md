@@ -1,9 +1,4 @@
-As of today, `16. Dec. 2016`, packtpub has removed the free daily ebooks. They will start again in 2017:
-```
-Free eBooks will continue in 2017
-Our Free Learning commitment that gives you free eBooks every day will return in early 2017. However you can now enjoy the entire Packt library with a 10 day trial of Mapt with no credit card required. So go ahead and enjoy every Packt eBook and video for free...
-```
-I guess that the script will need to be adjusted then.
+After there where not free ebooks in december 2016, packtpub has now enabled the service again. The scripts still works without changes because they did not rework the markup of the page.
 
 # Automatically receive packtpub's free daily book
 This script runs a headless browser, goes to `https://www.packtpub.com/`, logs into your account and "orders" the daily free book. After that it will send you an email with the title of the new book.
