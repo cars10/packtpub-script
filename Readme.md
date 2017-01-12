@@ -1,12 +1,9 @@
 After there where not free ebooks in december 2016, packtpub has now enabled the service again. The scripts still works without changes because they did not rework the markup of the page.
 
 # Automatically receive packtpub's free daily book
-This script runs a headless browser, goes to `https://www.packtpub.com/`, logs into your account and "orders" the daily free book. After that it will send you an email with the title of the new book.
+This script runs a headless browser, goes to `https://www.packtpub.com/packt/offers/free-learning`, logs into your account and "orders" the daily free book. After that it will send you an email with the title of the new book.
 
 It's written in ruby and uses phantomjs to run a headless browser and do what was explained above.
-
-`Why did you write another one? There are already plenty of scripts for that!`
-* Because i wanted to receive an email notification with the new books title and could not find a script with that functionality.
 
 ## Setup
 ### What you need
