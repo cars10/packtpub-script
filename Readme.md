@@ -47,7 +47,7 @@ Run the script manually with
 ruby script.rb
 ```
 
-Probably you want to run the script daily, so just setup a cron for that. Because cron uses a different environment then your user this will not work out of the box, because ruby and/or rvm will not be available there. To work around this you can create a small bash script, i use the following:
+Probably you want to run the script daily, so just setup a cron for that. Because cron does not use the same environment as your user this will not work out of the box, because ruby and/or rvm will not be available there. To work around this you can create a small bash script, i use the following:
 ```bash
 #!/bin/bash
 ## Add RVM to PATH for scripting
