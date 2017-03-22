@@ -36,7 +36,7 @@ MAIL_RECEIVER=your@mail.com
 MAIL_SENDER=smtp_sender@email.com
 PHANTOMJS=/path/to/phantomjsBinary
 ```
-To find out the path to the `phantomjs` binary, simply run `whereis phantomjs`.
+To find out the path to the `phantomjs` binary, simply run `which phantomjs`.
 
 ## How to run the script
 Run the script manually with
