@@ -1,5 +1,3 @@
-After there where not free ebooks in december 2016, packtpub has now enabled the service again. The scripts still works without changes because they did not rework the markup of the page.
-
 # Automatically receive packtpub's free daily book
 This script runs a headless browser, goes to `https://www.packtpub.com/packt/offers/free-learning`, logs into your account and "orders" the daily free book. After that it will send you an email with the title of the new book.
 
