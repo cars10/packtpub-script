@@ -1,5 +1,5 @@
-# -NOT WORKING ANYMORE- The script should work again.
--Since packtpub introduced a captcha to receive the daily free ebook you can no longer use this script.-
+# ~~NOT WORKING ANYMORE~~ The script should work again.
+~~Since packtpub introduced a captcha to receive the daily free ebook you can no longer use this script.~~
 
 # Automatically receive packtpub's free daily book
 This script runs a headless browser, goes to `https://www.packtpub.com/packt/offers/free-learning`, logs into your account and "orders" the daily free book. After that it will send you an email with the title of the new book.
