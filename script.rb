@@ -16,7 +16,6 @@ Dotenv.load
 Selenium::WebDriver::PhantomJS.path = ENV['PHANTOMJS']
 
 #== variables ==#
-button_class = "twelve-days-claim" # class of the button to get free book
 base_url = "https://www.packtpub.com/" # base url
 free_learning_url = "https://www.packtpub.com/packt/offers/free-learning" # url of the free book
 timeout = 10 # time the script waits for selectors to appear
@@ -36,9 +35,9 @@ browser.div(id: 'account-bar-logged-in').wait_until_present(timeout) # user is l
 # get free book
 browser.goto free_learning_url # go to free book url
 book_title = browser.div(class: 'dotd-title').when_present(timeout).h2.text # get book title
-ebook_id = browser.div(class: 'free-ebook').when_present(timeout).a.href.match(/\/freelearning-claim\/([^\/]*)/)[1] # receive ebook id
+ebook_id = browser.form(id: 'free-learning-form').when_present(timeout).action.match(/\/freelearning-claim\/([^\/]*)/)[1] # receive ebook id
 ebook_url = browser.div(class: 'dotd-main-book-image').when_present(timeout).a.href
-browser.a(class: 'twelve-days-claim').when_present(timeout).click # click the button to receive the free book
+browser.input(id: 'free-learning-claim').when_present(timeout).click # click the button to receive the free book
 #browser.screenshot.save 'screenshot.png' # comment in for debugging
 browser.close # close phantomjs
 

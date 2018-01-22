@@ -16,7 +16,7 @@ GEM
     pony (1.11)
       mail (>= 2.0)
     psych (2.0.17)
-    rubyzip (1.2.0)
+    rubyzip (1.2.1)
     selenium-webdriver (2.53.3)
       childprocess (~> 0.5)
       rubyzip (~> 1.0)
@@ -41,4 +41,4 @@ DEPENDENCIES
   webdriver-user-agent
 
 BUNDLED WITH
-   1.11.2
+   1.16.1
